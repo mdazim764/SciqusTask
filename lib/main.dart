@@ -219,7 +219,6 @@ class ResponsiveLayout extends StatelessWidget {
                       )
 
 
-
                     ],
                   ),
                   const SizedBox(height: 16),
