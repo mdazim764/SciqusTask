@@ -58,10 +58,14 @@ class ResponsiveLayout extends StatelessWidget {
                           color: Colors.red.shade100,
                           child: CarouselSlider(
                             items: [
-                              Image.asset('assets/images/p1.jpg', fit: BoxFit.cover),
-                              Image.asset('assets/images/p2.jpeg', fit: BoxFit.cover),
-                              Image.asset('assets/images/p3.jpg', fit: BoxFit.cover),
-                              Image.asset('assets/images/p4.jpg', fit: BoxFit.cover),
+                              Image.asset('assets/images/p1.jpg',
+                                  fit: BoxFit.cover),
+                              Image.asset('assets/images/p2.jpeg',
+                                  fit: BoxFit.cover),
+                              Image.asset('assets/images/p3.jpg',
+                                  fit: BoxFit.cover),
+                              Image.asset('assets/images/p4.jpg',
+                                  fit: BoxFit.cover),
                             ],
                             options: CarouselOptions(
                               autoPlay: true,
@@ -81,7 +85,7 @@ class ResponsiveLayout extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Image.asset(
-                                'assets/images/p1.jpg',
+                                'assets/images/p5.jpg',
                                 fit: BoxFit.cover,
                                 height: 200,
                               ),
@@ -89,7 +93,8 @@ class ResponsiveLayout extends StatelessWidget {
                               const Text(
                                 'This is a description for the image.',
                                 textAlign: TextAlign.center,
-                                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
                               ),
                             ],
                           ),
@@ -106,15 +111,18 @@ class ResponsiveLayout extends StatelessWidget {
                               // Adding a foreground overlay color
                               Container(
                                 decoration: BoxDecoration(
-                                  color: Colors.black.withOpacity(0.3), // Foreground overlay color
-                                  borderRadius: BorderRadius.circular(8), // Optional for rounded corners
+                                  color: Colors.black.withOpacity(
+                                      0.3), // Foreground overlay color
+                                  borderRadius: BorderRadius.circular(
+                                      8), // Optional for rounded corners
                                 ),
                                 child: CarouselSlider(
                                   items: [
                                     // Image 1 with description
                                     Stack(
                                       children: [
-                                        Image.asset('assets/images/p1.jpg', fit: BoxFit.cover),
+                                        Image.asset('assets/images/p1.jpg',
+                                            fit: BoxFit.cover),
                                         Positioned(
                                           bottom: 10,
                                           left: 10,
@@ -132,7 +140,8 @@ class ResponsiveLayout extends StatelessWidget {
                                     // Image 2 with description
                                     Stack(
                                       children: [
-                                        Image.asset('assets/images/p2.jpeg', fit: BoxFit.cover),
+                                        Image.asset('assets/images/p2.jpeg',
+                                            fit: BoxFit.cover),
                                         Positioned(
                                           bottom: 10,
                                           left: 10,
@@ -150,7 +159,8 @@ class ResponsiveLayout extends StatelessWidget {
                                     // Image 3 with description
                                     Stack(
                                       children: [
-                                        Image.asset('assets/images/p3.jpg', fit: BoxFit.cover),
+                                        Image.asset('assets/images/p3.jpg',
+                                            fit: BoxFit.cover),
                                         Positioned(
                                           bottom: 10,
                                           left: 10,
@@ -168,7 +178,8 @@ class ResponsiveLayout extends StatelessWidget {
                                     // Image 4 with description
                                     Stack(
                                       children: [
-                                        Image.asset('assets/images/p4.jpg', fit: BoxFit.cover),
+                                        Image.asset('assets/images/p4.jpg',
+                                            fit: BoxFit.cover),
                                         Positioned(
                                           bottom: 10,
                                           left: 10,
@@ -200,7 +211,8 @@ class ResponsiveLayout extends StatelessWidget {
                                 child: IconButton(
                                   icon: const Icon(Icons.arrow_left, size: 40),
                                   color: Colors.white, // Arrow color
-                                  onPressed: () => _carouselController.previousPage(),
+                                  onPressed: () =>
+                                      _carouselController.previousPage(),
                                 ),
                               ),
 
@@ -210,15 +222,14 @@ class ResponsiveLayout extends StatelessWidget {
                                 child: IconButton(
                                   icon: const Icon(Icons.arrow_right, size: 40),
                                   color: Colors.white, // Arrow color
-                                  onPressed: () => _carouselController.nextPage(),
+                                  onPressed: () =>
+                                      _carouselController.nextPage(),
                                 ),
                               ),
                             ],
                           ),
                         ),
                       )
-
-
                     ],
                   ),
                   const SizedBox(height: 16),
@@ -228,16 +239,21 @@ class ResponsiveLayout extends StatelessWidget {
                       Expanded(
                         flex: 2,
                         child: ContainerBox(
-                          color: Colors.transparent, // Transparent to add gradient
+                          color:
+                              Colors.transparent, // Transparent to add gradient
                           child: Container(
                             decoration: BoxDecoration(
                               gradient: LinearGradient(
-                                colors: [Colors.teal.shade200, Colors.teal.shade500],
+                                colors: [
+                                  Colors.teal.shade200,
+                                  Colors.teal.shade500
+                                ],
                                 begin: Alignment.topLeft,
                                 end: Alignment.bottomRight,
                               ),
                               borderRadius: BorderRadius.circular(12),
-                              border: Border.all(color: Colors.teal.shade700, width: 2),
+                              border: Border.all(
+                                  color: Colors.teal.shade700, width: 2),
                             ),
                             padding: const EdgeInsets.all(16),
                             child: Column(
@@ -287,7 +303,8 @@ class ResponsiveLayout extends StatelessWidget {
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: Colors.teal.shade700,
                                     foregroundColor: Colors.white,
-                                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 20, vertical: 12),
                                   ),
                                   child: const Text('Learn More'),
                                 ),
@@ -296,7 +313,6 @@ class ResponsiveLayout extends StatelessWidget {
                           ),
                         ),
                       ),
-
                       SizedBox(width: 16),
                       Expanded(
                         flex: 2,
@@ -306,12 +322,16 @@ class ResponsiveLayout extends StatelessWidget {
                               width: double.infinity, // Ensures full width
                               decoration: BoxDecoration(
                                 gradient: LinearGradient(
-                                  colors: [Colors.orange.shade200, Colors.orange.shade500],
+                                  colors: [
+                                    Colors.orange.shade200,
+                                    Colors.orange.shade500
+                                  ],
                                   begin: Alignment.topLeft,
                                   end: Alignment.bottomRight,
                                 ),
                                 borderRadius: BorderRadius.circular(12),
-                                border: Border.all(color: Colors.orange.shade700, width: 2),
+                                border: Border.all(
+                                    color: Colors.orange.shade700, width: 2),
                               ),
                               padding: const EdgeInsets.all(16),
                               child: Column(
@@ -320,86 +340,102 @@ class ResponsiveLayout extends StatelessWidget {
                                   // Custom Button 1
                                   ElevatedButton(
                                     onPressed: () {
-                                      _showMessageBox(context, "Custom Button A clicked");
+                                      _showMessageBox(
+                                          context, "Custom Button A clicked");
                                     },
                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.orange, // Button color
-                                      padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                                      textStyle: TextStyle(fontSize: 16), // Custom text style
+                                      backgroundColor:
+                                          Colors.orange, // Button color
+                                      padding: EdgeInsets.symmetric(
+                                          horizontal: 50, vertical: 15),
+                                      textStyle: TextStyle(
+                                          fontSize: 16), // Custom text style
                                     ),
                                     child: Text('Button A'),
                                   ),
-                                  const SizedBox(height: 8), // Space between buttons
+                                  const SizedBox(
+                                      height: 8), // Space between buttons
                                   // Custom Button 2
                                   ElevatedButton(
                                     onPressed: () {
-                                      _showMessageBox(context, "Custom Button B clicked");
+                                      _showMessageBox(
+                                          context, "Custom Button B clicked");
                                     },
                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.lightGreenAccent, // Button color
-                                      padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                                      textStyle: TextStyle(fontSize: 16), // Custom text style
+                                      backgroundColor: Colors
+                                          .lightGreenAccent, // Button color
+                                      padding: EdgeInsets.symmetric(
+                                          horizontal: 50, vertical: 15),
+                                      textStyle: TextStyle(
+                                          fontSize: 16), // Custom text style
                                     ),
                                     child: Text('Button B'),
                                   ),
                                 ],
-                              ),)
-                        ),
+                              ),
+                            )),
                       ),
-
                       SizedBox(width: 16),
                       Expanded(
                         flex: 1,
                         child: ContainerBox(
                           color: Colors.grey.shade300,
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            // Adding a foreground overlay color
-                            Container(
-                              decoration: BoxDecoration(
-                                color: Colors.black.withOpacity(0.3), // Foreground overlay color
-                                borderRadius: BorderRadius.circular(8), // Optional for rounded corners
-                              ),
-                              child: CarouselSlider(
-                                items: [
-                                  Image.asset('assets/images/p1.jpg', fit: BoxFit.cover),
-                                  Image.asset('assets/images/p2.jpeg', fit: BoxFit.cover),
-                                  Image.asset('assets/images/p3.jpg', fit: BoxFit.cover),
-                                  Image.asset('assets/images/p4.jpg', fit: BoxFit.cover),
-                                ],
-                                options: CarouselOptions(
-                                  autoPlay: true,
-                                  enlargeCenterPage: true,
-                                  aspectRatio: 2.0,
-                                  viewportFraction: 1.0,
+                          child: Stack(
+                            alignment: Alignment.center,
+                            children: [
+                              // Adding a foreground overlay color
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.black.withOpacity(
+                                      0.3), // Foreground overlay color
+                                  borderRadius: BorderRadius.circular(
+                                      8), // Optional for rounded corners
                                 ),
-                                carouselController: _carouselController,
+                                child: CarouselSlider(
+                                  items: [
+                                    Image.asset('assets/images/p6.jpg',
+                                        fit: BoxFit.cover),
+                                    Image.asset('assets/images/p4.jpeg',
+                                        fit: BoxFit.cover),
+                                    Image.asset('assets/images/p7.jpg',
+                                        fit: BoxFit.cover),
+                                    Image.asset('assets/images/p3.jpg',
+                                        fit: BoxFit.cover),
+                                  ],
+                                  options: CarouselOptions(
+                                    autoPlay: true,
+                                    enlargeCenterPage: true,
+                                    aspectRatio: 2.0,
+                                    viewportFraction: 1.0,
+                                  ),
+                                  carouselController: _carouselController,
+                                ),
                               ),
-                            ),
 
-                            // Left Arrow Button
-                            Positioned(
-                              left: 10,
-                              child: IconButton(
-                                icon: const Icon(Icons.arrow_left, size: 40),
-                                color: Colors.white, // Arrow color
-                                onPressed: () => _carouselController.previousPage(),
+                              // Left Arrow Button
+                              Positioned(
+                                left: 10,
+                                child: IconButton(
+                                  icon: const Icon(Icons.arrow_left, size: 40),
+                                  color: Colors.white, // Arrow color
+                                  onPressed: () =>
+                                      _carouselController.previousPage(),
+                                ),
                               ),
-                            ),
 
-                            // Right Arrow Button
-                            Positioned(
-                              right: 10,
-                              child: IconButton(
-                                icon: const Icon(Icons.arrow_right, size: 40),
-                                color: Colors.white, // Arrow color
-                                onPressed: () => _carouselController.nextPage(),
+                              // Right Arrow Button
+                              Positioned(
+                                right: 10,
+                                child: IconButton(
+                                  icon: const Icon(Icons.arrow_right, size: 40),
+                                  color: Colors.white, // Arrow color
+                                  onPressed: () =>
+                                      _carouselController.nextPage(),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
                       ),
                     ],
                   ),
@@ -486,22 +522,22 @@ class MobileLayout extends StatelessWidget {
             color: Colors.purple.shade100,
             child: Container(
               width: double.infinity, // Ensures full width
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'assets/images/p1.jpg',
-                  fit: BoxFit.cover,
-                  height: 200,
-                ),
-                const SizedBox(height: 8),
-                const Text(
-                  'This is a description for the image.',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/images/p5.jpg',
+                    fit: BoxFit.cover,
+                    height: 200,
+                  ),
+                  const SizedBox(height: 8),
+                  const Text(
+                    'This is a description for the image.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
             ),
           ),
           const SizedBox(height: 8),
@@ -576,7 +612,8 @@ class MobileLayout extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.teal.shade700,
                       foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 12),
                     ),
                     child: const Text('Learn More'),
                   ),
@@ -585,53 +622,55 @@ class MobileLayout extends StatelessWidget {
             ),
           ),
 
-
           // Container 5 (custom Buttons)
           ContainerBox(
               color: Colors.transparent,
-            child: Container(
-              width: double.infinity, // Ensures full width
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Colors.orange.shade200, Colors.orange.shade500],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: Colors.orange.shade700, width: 2),
-              ),
-              padding: const EdgeInsets.all(16),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                // Custom Button 1
-                ElevatedButton(
-                  onPressed: () {
-                    _showMessageBox(context, "Custom Button A clicked");
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.orange, // Button color
-                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                    textStyle: TextStyle(fontSize: 16), // Custom text style
+              child: Container(
+                width: double.infinity, // Ensures full width
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [Colors.orange.shade200, Colors.orange.shade500],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
                   ),
-                  child: Text('Button A'),
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: Colors.orange.shade700, width: 2),
                 ),
-                const SizedBox(height: 8), // Space between buttons
-                // Custom Button 2
-                ElevatedButton(
-                  onPressed: () {
-                    _showMessageBox(context, "Custom Button B clicked");
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.lightGreenAccent, // Button color
-                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                    textStyle: TextStyle(fontSize: 16), // Custom text style
-                  ),
-                  child: Text('Button B'),
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    // Custom Button 1
+                    ElevatedButton(
+                      onPressed: () {
+                        _showMessageBox(context, "Custom Button A clicked");
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.orange, // Button color
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                        textStyle: TextStyle(fontSize: 16), // Custom text style
+                      ),
+                      child: Text('Button A'),
+                    ),
+                    const SizedBox(height: 8), // Space between buttons
+                    // Custom Button 2
+                    ElevatedButton(
+                      onPressed: () {
+                        _showMessageBox(context, "Custom Button B clicked");
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor:
+                            Colors.lightGreenAccent, // Button color
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                        textStyle: TextStyle(fontSize: 16), // Custom text style
+                      ),
+                      child: Text('Button B'),
+                    ),
+                  ],
                 ),
-              ],
-            ),)
-          ),
+              )),
           const SizedBox(height: 8),
 
           // Container 6 (Footer)
@@ -645,6 +684,7 @@ class MobileLayout extends StatelessWidget {
     );
   }
 }
+
 // Helper method to show the message box
 void _showMessageBox(BuildContext context, String message) {
   showDialog(
@@ -666,26 +706,6 @@ void _showMessageBox(BuildContext context, String message) {
   );
 }
 
-
-// // ContainerBox widget for styling
-// class ContainerBox extends StatelessWidget {
-//   final Color color;
-//   final Widget child;
-//
-//   const ContainerBox({
-//     required this.color,
-//     required this.child,
-//   });
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       padding: EdgeInsets.all(16),
-//       color: color,
-//       child: child,
-//     );
-//   }
-// }
 class ContainerBox extends StatelessWidget {
   final Color color;
   final String? text;
